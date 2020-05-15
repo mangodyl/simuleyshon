@@ -26,6 +26,10 @@ const FieldInput = styled.input`
   font-size: 1em;
 `;
 
+const ButtonWrapper = styled.div`
+  text-align: center;
+`;
+
 const CalculateButton = styled.button`
   background: #0f1928;
   color: #ffd563;
@@ -41,4 +45,11 @@ const CalculateButton = styled.button`
   }
 `;
 
-export { Grid, GridCell, FieldTitle, FieldInput, CalculateButton };
+export {
+  Grid,
+  GridCell,
+  FieldTitle,
+  FieldInput,
+  ButtonWrapper,
+  CalculateButton,
+};
