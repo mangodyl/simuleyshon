@@ -11,6 +11,7 @@ import WideReciever from "../components/WideReciever";
 import TightEnd from "../components/TightEnd";
 import RunningBack from "../components/RunningBack";
 import QuarterBack from "../components/QuarterBack";
+import Kicker from "../components/Kicker";
 
 const Home = () => {
   const [playerType, setPlayerState] = useState("");
@@ -110,6 +111,15 @@ const Home = () => {
           {playerType === "TE" && <TightEnd {...bulkProps} />}
           {playerType === "RB" && <RunningBack {...bulkProps} />}
           {playerType === "QB" && <QuarterBack {...bulkProps} />}
+          {playerType === "K" && (
+            <Kicker
+              onChange={onChange}
+              emptyFieldHandler={emptyFieldHandler}
+              fieldGoals={fieldGoals}
+              pats={pats}
+              fgMisses={fgMisses}
+            />
+          )}
         </div>
         <div>
           {playerType !== "" && (

@@ -32,7 +32,7 @@ const QuarterBack = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "recTDs" })}
           />
         </GridCell>
-        <GridCell>
+        <GridCell highlight>
           <FieldTitle>Rush Yards</FieldTitle>
           <FieldInput
             type="text"
@@ -41,7 +41,7 @@ const QuarterBack = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "rushYds" })}
           />
         </GridCell>
-        <GridCell>
+        <GridCell highlight>
           <FieldTitle>Rush TDs</FieldTitle>
           <FieldInput
             type="text"
@@ -50,7 +50,7 @@ const QuarterBack = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "rushTDs" })}
           />
         </GridCell>
-        <GridCell>
+        <GridCell highlight>
           <FieldTitle>Passing Yards</FieldTitle>
           <FieldInput
             type="text"
@@ -59,7 +59,7 @@ const QuarterBack = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "passYds" })}
           />
         </GridCell>
-        <GridCell>
+        <GridCell highlight>
           <FieldTitle>Passing TDs</FieldTitle>
           <FieldInput
             type="text"
@@ -68,7 +68,7 @@ const QuarterBack = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "passTDs" })}
           />
         </GridCell>
-        <GridCell>
+        <GridCell highlight>
           <FieldTitle>Fumbles</FieldTitle>
           <FieldInput
             type="text"
