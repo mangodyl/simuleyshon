@@ -1,0 +1,16 @@
+{
+  "title": "GameWeek",
+  "description": "Represents one game week",
+  "type": "object",
+  "properties": {
+    "weekId": {
+      "type": "number"
+    },
+    "teams": {
+      "type": "array",
+      "items": {
+        "$ref": "./team.json"
+      }
+    }
+  }
+}
