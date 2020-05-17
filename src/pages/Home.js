@@ -31,6 +31,7 @@ const Home = () => {
   const [fieldGoals, setFieldGoals] = useState(0);
   const [pats, setPats] = useState(0);
   const [fgMisses, setFgMisses] = useState(0);
+  const [patMisses, setPatMisses] = useState(0);
 
   const reducer = (val, action) => {
     switch (action.type) {
@@ -144,6 +145,15 @@ const Home = () => {
     fumbles,
   };
 
+  const kickerProps = {
+    onChange,
+    emptyFieldHandler,
+    fieldGoals,
+    pats,
+    fgMisses,
+    patMisses,
+  };
+
   return (
     <ContentWrapper>
       <div>
@@ -178,6 +188,7 @@ const Home = () => {
         {playerType === "TE" && <TightEnd {...bulkProps} />}
         {playerType === "RB" && <RunningBack {...bulkProps} />}
         {playerType === "QB" && <QuarterBack {...bulkProps} />}
+        {playerType === "K" && <Kicker {...kickerProps} />}
       </div>
       <div>
         {playerType !== "" && (

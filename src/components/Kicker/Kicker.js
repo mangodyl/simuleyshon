@@ -32,6 +32,15 @@ const Kicker = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "fgMisses" })}
           />
         </GridCell>
+        <GridCell highlight>
+          <FieldTitle>Missed PATs</FieldTitle>
+          <FieldInput
+            type="text"
+            value={props.patMisses}
+            onChange={(e) => props.onChange(e, { type: "patMisses" })}
+            onBlur={(e) => props.emptyFieldHandler(e, { type: "patMisses" })}
+          />
+        </GridCell>
       </Grid>
     </Fragment>
   );
