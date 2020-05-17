@@ -5,7 +5,7 @@
     "name": {
       "type": "string"
     },
-    "role": {
+    "position": {
       "enum": [
         "WR",
         "TE",
@@ -41,7 +41,16 @@
         "fumbles": {
           "type": "number"
         },
-        "fumblesLost": {
+        "fieldGoals": {
+          "type": "number"
+        },
+        "fgMisses": {
+          "type": "number"
+        },
+        "pats": {
+          "type": "number"
+        },
+        "patMisses": {
           "type": "number"
         }
       }
