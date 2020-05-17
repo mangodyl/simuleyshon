@@ -1,0 +1,15 @@
+{
+  "title": "Team",
+  "type": "object",
+  "properties": {
+    "owner": {
+      "type": "string"
+    },
+    "players": {
+      "type": "array",
+      "items": {
+        "$ref": "./player.json"
+      }
+    }
+  }
+}

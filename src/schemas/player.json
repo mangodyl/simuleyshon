@@ -1,0 +1,62 @@
+{
+  "title": "Player",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "enum": [
+        "WR",
+        "TE",
+        "QB",
+        "RB",
+        "K"
+      ]
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "catches": {
+          "type": "number"
+        },
+        "recYds": {
+          "type": "number"
+        },
+        "recTouchdowns": {
+          "type": "number"
+        },
+        "rushTouchdowns": {
+          "type": "number"
+        },
+        "rushYds": {
+          "type": "number"
+        },
+        "passYds": {
+          "type": "number"
+        },
+        "passTouchdowns": {
+          "type": "number"
+        },
+        "fumbles": {
+          "type": "number"
+        },
+        "interceptions": {
+          "type": "number"
+        },
+        "fieldGoals": {
+          "type": "number"
+        },
+        "fgMisses": {
+          "type": "number"
+        },
+        "pats": {
+          "type": "number"
+        },
+        "patMisses": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}
