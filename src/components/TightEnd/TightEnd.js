@@ -5,7 +5,7 @@ const TightEnd = (props) => {
   return (
     <Fragment>
       <Grid>
-        <GridCell>
+        <GridCell highlight>
           <FieldTitle>Rec Yards</FieldTitle>
           <FieldInput
             type="text"
@@ -14,7 +14,7 @@ const TightEnd = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "recYds" })}
           />
         </GridCell>
-        <GridCell>
+        <GridCell highlight>
           <FieldTitle>Catches</FieldTitle>
           <FieldInput
             type="text"
@@ -23,7 +23,7 @@ const TightEnd = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "catches" })}
           />
         </GridCell>
-        <GridCell>
+        <GridCell highlight>
           <FieldTitle>TDs</FieldTitle>
           <FieldInput
             type="text"
@@ -75,6 +75,15 @@ const TightEnd = (props) => {
             value={props.fumbles}
             onChange={(e) => props.onChange(e, { type: "fumbles" })}
             onBlur={(e) => props.emptyFieldHandler(e, { type: "fumbles" })}
+          />
+        </GridCell>
+        <GridCell>
+          <FieldTitle>2-pt Conversions</FieldTitle>
+          <FieldInput
+            type="text"
+            value={props.twoPts}
+            onChange={(e) => props.onChange(e, { type: "twoPts" })}
+            onBlur={(e) => props.emptyFieldHandler(e, { type: "twoPts" })}
           />
         </GridCell>
       </Grid>

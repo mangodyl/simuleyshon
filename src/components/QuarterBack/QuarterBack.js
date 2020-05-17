@@ -32,7 +32,7 @@ const QuarterBack = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "recTDs" })}
           />
         </GridCell>
-        <GridCell>
+        <GridCell highlight>
           <FieldTitle>Rush Yards</FieldTitle>
           <FieldInput
             type="text"
@@ -41,7 +41,7 @@ const QuarterBack = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "rushYds" })}
           />
         </GridCell>
-        <GridCell>
+        <GridCell highlight>
           <FieldTitle>Rush TDs</FieldTitle>
           <FieldInput
             type="text"
@@ -50,7 +50,7 @@ const QuarterBack = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "rushTDs" })}
           />
         </GridCell>
-        <GridCell>
+        <GridCell highlight>
           <FieldTitle>Passing Yards</FieldTitle>
           <FieldInput
             type="text"
@@ -59,7 +59,7 @@ const QuarterBack = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "passYds" })}
           />
         </GridCell>
-        <GridCell>
+        <GridCell highlight>
           <FieldTitle>Passing TDs</FieldTitle>
           <FieldInput
             type="text"
@@ -68,13 +68,31 @@ const QuarterBack = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "passTDs" })}
           />
         </GridCell>
-        <GridCell>
+        <GridCell highlight>
+          <FieldTitle>Interceptions</FieldTitle>
+          <FieldInput
+            type="text"
+            value={props.ints}
+            onChange={(e) => props.onChange(e, { type: "ints" })}
+            onBlur={(e) => props.emptyFieldHandler(e, { type: "ints" })}
+          />
+        </GridCell>
+        <GridCell highlight>
           <FieldTitle>Fumbles</FieldTitle>
           <FieldInput
             type="text"
             value={props.fumbles}
             onChange={(e) => props.onChange(e, { type: "fumbles" })}
             onBlur={(e) => props.emptyFieldHandler(e, { type: "fumbles" })}
+          />
+        </GridCell>
+        <GridCell>
+          <FieldTitle>2-pt Conversions</FieldTitle>
+          <FieldInput
+            type="text"
+            value={props.twoPts}
+            onChange={(e) => props.onChange(e, { type: "twoPts" })}
+            onBlur={(e) => props.emptyFieldHandler(e, { type: "twoPts" })}
           />
         </GridCell>
       </Grid>

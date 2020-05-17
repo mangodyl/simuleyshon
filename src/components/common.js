@@ -14,6 +14,9 @@ const GridCell = styled.div`
   text-align: center;
   padding: 8px 0;
   object-fit: cover;
+
+  border: ${(props) => props.highlight && "4px solid #0f1928"};
+  background-color: ${(props) => (props.highlight ? "#f8b500" : "#ffd563")};
 `;
 
 const FieldTitle = styled.p`
