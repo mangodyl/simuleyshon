@@ -107,7 +107,7 @@ const Home = () => {
     const rushPoints = rushYds * 0.1 + rushTDs * 6;
     // 2-pt (2), int (-1),
     const passPoints = passYds * 0.04 + passTDs * 4;
-    const kickPoints = fieldGoals * 2 + pats * 1 - fgMisses * 1;
+    const kickPoints = fieldGoals * 3 + pats * 1 - fgMisses * 1;
     const fumblePoints = fumbles * -1;
     const pointsTotal = (
       recPoints +
