@@ -33,26 +33,4 @@ const ButtonWrapper = styled.div`
   text-align: center;
 `;
 
-const CalculateButton = styled.button`
-  background: #0f1928;
-  color: #ffd563;
-  width: 80%;
-  font-size: 2em;
-  padding: 0.25em 1em;
-  border: 2px solid #2196f3;
-  border-radius: 3px;
-
-  &:hover {
-    background-color: #ffd563;
-    color: #0f1928;
-  }
-`;
-
-export {
-  Grid,
-  GridCell,
-  FieldTitle,
-  FieldInput,
-  ButtonWrapper,
-  CalculateButton,
-};
+export { Grid, GridCell, FieldTitle, FieldInput, ButtonWrapper };

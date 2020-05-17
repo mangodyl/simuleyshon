@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-const Background = styled.div`
-  background-color: #0f1928;
-  height: 100vh;
-  max-width: 100%;
-`;
-
 const ContentWrapper = styled.div`
   padding: 40px 0px;
   margin: 0 auto;
@@ -35,4 +29,58 @@ const PlayerTypeButton = styled.button`
   border-radius: 3px;
 `;
 
-export { Background, ContentWrapper, Title, P, PlayerTypeButton };
+const CalculateButton = styled.button`
+  background: #0f1928;
+  color: #ffd563;
+  width: 80%;
+  font-size: 2em;
+  padding: 0.25em 1em;
+  border: 2px solid #2196f3;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: #ffd563;
+    color: #0f1928;
+  }
+`;
+
+const PointsTotalDisplay = styled.div`
+  font-family: "Roboto", sans-serif;
+  background-color: #f8b500;
+  color: #0f1928;
+
+  font-size: 2em;
+  margin: 0.5em 0;
+  padding: 0.4em 1em;
+  border-radius: 8px;
+  min-width: 40%;
+`;
+
+const PointsDisplayWrapper = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+`;
+
+const ClearButton = styled.div`
+  font-family: "Roboto", sans-serif;
+  background-color: #2196f3;
+  color: #fdfdfc;
+
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  padding: 0.4em 1em;
+  border-radius: 8px;
+`;
+
+export {
+  ContentWrapper,
+  Title,
+  P,
+  PlayerTypeButton,
+  CalculateButton,
+  PointsTotalDisplay,
+  PointsDisplayWrapper,
+  ClearButton,
+};

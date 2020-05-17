@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import {
-  Background,
   ContentWrapper,
   Title,
   P,
   PlayerTypeButton,
+  CalculateButton,
+  PointsTotalDisplay,
+  PointsDisplayWrapper,
+  ClearButton,
 } from "./Home.styles";
-import { ButtonWrapper, CalculateButton } from "../components/common";
+import { ButtonWrapper } from "../components/common";
 import WideReciever from "../components/WideReciever";
 import TightEnd from "../components/TightEnd";
 import RunningBack from "../components/RunningBack";
@@ -15,6 +18,8 @@ import Kicker from "../components/Kicker";
 
 const Home = () => {
   const [playerType, setPlayerState] = useState("");
+  const [totalPoints, setTotalPoints] = useState(0);
+  const [showTotalPoints, setShowTotalPoints] = useState(false);
   const [recYds, setRecYds] = useState(0);
   const [recTDs, setRecTDs] = useState(0);
   const [catches, setCatches] = useState(0);
@@ -30,29 +35,40 @@ const Home = () => {
   const reducer = (val, action) => {
     switch (action.type) {
       case "recYds":
-        return setRecYds(val);
+        setRecYds(val);
+        break;
       case "recTDs":
-        return setRecTDs(val);
+        setRecTDs(val);
+        break;
       case "catches":
-        return setCatches(val);
+        setCatches(val);
+        break;
       case "rushYds":
-        return setRushYds(val);
+        setRushYds(val);
+        break;
       case "rushTDs":
-        return setRushTDs(val);
+        setRushTDs(val);
+        break;
       case "passYds":
-        return setPassYds(val);
+        setPassYds(val);
+        break;
       case "passTDs":
-        return setPassTDs(val);
+        setPassTDs(val);
+        break;
       case "fumbles":
-        return setFumbles(val);
+        setFumbles(val);
+        break;
       case "fieldGoals":
-        return setFieldGoals(val);
+        setFieldGoals(val);
+        break;
       case "pats":
-        return setPats(val);
+        setPats(val);
+        break;
       case "fgMisses":
-        return setFgMisses(val);
+        setFgMisses(val);
+        break;
       default:
-        return;
+        console.log("Error: no action (Home.js reducer function");
     }
   };
 
@@ -71,6 +87,50 @@ const Home = () => {
     return;
   };
 
+  const calculate = () => {
+    // keep catches with the * 1 for consistency and as we may swap from PPR at some point
+    // 2-pt (2)
+    const recPoints = recYds * 0.1 + catches * 1 + recTDs * 6;
+    // 2-pt (2)
+    const rushPoints = rushYds * 0.1 + rushTDs * 6;
+    // 2-pt (2), int (-1),
+    const passPoints = passYds * 0.04 + passTDs * 4;
+    // pats missed (-1)
+    const kickPoints = fieldGoals * 2 + pats * 1 - fgMisses * 1;
+    const fumblePoints = fumbles * -1;
+    const pointsTotal = (
+      recPoints +
+      rushPoints +
+      passPoints +
+      kickPoints +
+      fumblePoints
+    ).toFixed(2);
+    setTotalPoints(pointsTotal);
+    setShowTotalPoints(true);
+  };
+
+  const clearState = () => {
+    setPlayerState("");
+    setShowTotalPoints(false);
+    const stateArr = [
+      "recYds",
+      "recTDs",
+      "catches",
+      "rushYds",
+      "rushTDs",
+      "passYds",
+      "passTDs",
+      "fumbles",
+      "fieldGoals",
+      "pats",
+      "fgMisses",
+    ];
+    const actionArr = stateArr.map((val) => {
+      return { type: val };
+    });
+    actionArr.forEach((type) => reducer(0, type));
+  };
+
   const bulkProps = {
     onChange,
     emptyFieldHandler,
@@ -85,51 +145,50 @@ const Home = () => {
   };
 
   return (
-    <Background>
-      <ContentWrapper>
-        <div>
-          <Title>Fantasy Football Simuleyshon</Title>
-          <P>You must be desperate, huh?</P>
-        </div>
-        <div>
-          <PlayerTypeButton onClick={() => setPlayerState("QB")}>
-            Quarterback
-          </PlayerTypeButton>
-          <PlayerTypeButton onClick={() => setPlayerState("RB")}>
-            Running Back
-          </PlayerTypeButton>
-          <PlayerTypeButton onClick={() => setPlayerState("WR")}>
-            Wide Reviever
-          </PlayerTypeButton>
-          <PlayerTypeButton onClick={() => setPlayerState("TE")}>
-            Tight End
-          </PlayerTypeButton>
-          <PlayerTypeButton onClick={() => setPlayerState("K")}>
-            Kicker
-          </PlayerTypeButton>
-          {playerType === "WR" && <WideReciever {...bulkProps} />}
-          {playerType === "TE" && <TightEnd {...bulkProps} />}
-          {playerType === "RB" && <RunningBack {...bulkProps} />}
-          {playerType === "QB" && <QuarterBack {...bulkProps} />}
-          {playerType === "K" && (
-            <Kicker
-              onChange={onChange}
-              emptyFieldHandler={emptyFieldHandler}
-              fieldGoals={fieldGoals}
-              pats={pats}
-              fgMisses={fgMisses}
-            />
-          )}
-        </div>
-        <div>
-          {playerType !== "" && (
-            <ButtonWrapper>
-              <CalculateButton>Calculate</CalculateButton>
-            </ButtonWrapper>
-          )}
-        </div>
-      </ContentWrapper>
-    </Background>
+    <ContentWrapper>
+      <div>
+        <Title>Fantasy Football Simuleyshon</Title>
+        <P>You must be desperate, huh?</P>
+      </div>
+      <div>
+        <PlayerTypeButton onClick={() => setPlayerState("QB")}>
+          Quarterback
+        </PlayerTypeButton>
+        <PlayerTypeButton onClick={() => setPlayerState("RB")}>
+          Running Back
+        </PlayerTypeButton>
+        <PlayerTypeButton onClick={() => setPlayerState("WR")}>
+          Wide Reviever
+        </PlayerTypeButton>
+        <PlayerTypeButton onClick={() => setPlayerState("TE")}>
+          Tight End
+        </PlayerTypeButton>
+        <PlayerTypeButton onClick={() => setPlayerState("K")}>
+          Kicker
+        </PlayerTypeButton>
+
+        {showTotalPoints && (
+          <PointsDisplayWrapper>
+            <PointsTotalDisplay>Points: {totalPoints}</PointsTotalDisplay>
+            <ClearButton onClick={() => clearState()}>Clear</ClearButton>
+          </PointsDisplayWrapper>
+        )}
+
+        {playerType === "WR" && <WideReciever {...bulkProps} />}
+        {playerType === "TE" && <TightEnd {...bulkProps} />}
+        {playerType === "RB" && <RunningBack {...bulkProps} />}
+        {playerType === "QB" && <QuarterBack {...bulkProps} />}
+      </div>
+      <div>
+        {playerType !== "" && (
+          <ButtonWrapper>
+            <CalculateButton onClick={() => calculate()}>
+              Calculate
+            </CalculateButton>
+          </ButtonWrapper>
+        )}
+      </div>
+    </ContentWrapper>
   );
 };
 
