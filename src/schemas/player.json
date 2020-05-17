@@ -41,6 +41,9 @@
         "fumbles": {
           "type": "number"
         },
+        "interceptions": {
+          "type": "number"
+        },
         "fieldGoals": {
           "type": "number"
         },
