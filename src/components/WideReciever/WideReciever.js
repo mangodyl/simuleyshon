@@ -77,6 +77,15 @@ const WideReciever = (props) => {
             onBlur={(e) => props.emptyFieldHandler(e, { type: "fumbles" })}
           />
         </GridCell>
+        <GridCell>
+          <FieldTitle>2-pt Conversions</FieldTitle>
+          <FieldInput
+            type="text"
+            value={props.twoPts}
+            onChange={(e) => props.onChange(e, { type: "twoPts" })}
+            onBlur={(e) => props.emptyFieldHandler(e, { type: "twoPts" })}
+          />
+        </GridCell>
       </Grid>
     </Fragment>
   );

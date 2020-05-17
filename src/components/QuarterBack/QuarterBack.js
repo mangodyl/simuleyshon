@@ -69,12 +69,30 @@ const QuarterBack = (props) => {
           />
         </GridCell>
         <GridCell highlight>
+          <FieldTitle>Interceptions</FieldTitle>
+          <FieldInput
+            type="text"
+            value={props.ints}
+            onChange={(e) => props.onChange(e, { type: "ints" })}
+            onBlur={(e) => props.emptyFieldHandler(e, { type: "ints" })}
+          />
+        </GridCell>
+        <GridCell highlight>
           <FieldTitle>Fumbles</FieldTitle>
           <FieldInput
             type="text"
             value={props.fumbles}
             onChange={(e) => props.onChange(e, { type: "fumbles" })}
             onBlur={(e) => props.emptyFieldHandler(e, { type: "fumbles" })}
+          />
+        </GridCell>
+        <GridCell>
+          <FieldTitle>2-pt Conversions</FieldTitle>
+          <FieldInput
+            type="text"
+            value={props.twoPts}
+            onChange={(e) => props.onChange(e, { type: "twoPts" })}
+            onBlur={(e) => props.emptyFieldHandler(e, { type: "twoPts" })}
           />
         </GridCell>
       </Grid>
