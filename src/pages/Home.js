@@ -27,6 +27,8 @@ const Home = () => {
   const [rushTDs, setRushTDs] = useState(0);
   const [passYds, setPassYds] = useState(0);
   const [passTDs, setPassTDs] = useState(0);
+  const [ints, setInts] = useState(0);
+  const [twoPts, setTwoPts] = useState(0);
   const [fumbles, setFumbles] = useState(0);
   const [fieldGoals, setFieldGoals] = useState(0);
   const [pats, setPats] = useState(0);
@@ -56,6 +58,12 @@ const Home = () => {
       case "passTDs":
         setPassTDs(val);
         break;
+      case "ints":
+        setInts(val);
+        break;
+      case "twoPts":
+        setTwoPts(val);
+        break;
       case "fumbles":
         setFumbles(val);
         break;
@@ -67,6 +75,9 @@ const Home = () => {
         break;
       case "fgMisses":
         setFgMisses(val);
+        break;
+      case "patMisses":
+        setPatMisses(val);
         break;
       default:
         console.log("Error: no action (Home.js reducer function");
@@ -96,7 +107,6 @@ const Home = () => {
     const rushPoints = rushYds * 0.1 + rushTDs * 6;
     // 2-pt (2), int (-1),
     const passPoints = passYds * 0.04 + passTDs * 4;
-    // pats missed (-1)
     const kickPoints = fieldGoals * 2 + pats * 1 - fgMisses * 1;
     const fumblePoints = fumbles * -1;
     const pointsTotal = (
@@ -142,6 +152,8 @@ const Home = () => {
     rushTDs,
     passYds,
     passTDs,
+    ints,
+    twoPts,
     fumbles,
   };
 
