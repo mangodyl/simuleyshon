@@ -1,0 +1,321 @@
+{
+  "Matt": {
+    "RB": [
+      "Christian McCaffrey",
+      "Le'Veon Bell",
+      "Raheem Mostert",
+      "Latavius Murray",
+      "Jamaal Williams"
+    ],
+    "QB": [
+      "Drew Brees",
+      "Dak Prescott",
+      "Ryan Tannehill"
+    ],
+    "WR": [
+      "Amari Cooper",
+      "JuJu Smith-Schuster",
+      "D.J. Moore",
+      "Tyler Boyd",
+      "Golden Tate",
+      "Tyrell Williams",
+      "Parris Campbell"
+    ],
+    "TE": [
+      "Jared Cook",
+      "Eric Ebron",
+      "Jack Doyle",
+      "David Njoku"
+    ],
+    "K": [
+      "Ka'imi Fairbairn"
+    ]
+  },
+  "Adam": {
+    "RB": [
+      "Ezekiel Elliot",
+      "Mark Ingram II",
+      "Kerryon Johnson",
+      "David Montgomery",
+      "Tarik Cohen",
+      "Ito Smith"
+    ],
+    "QB": [
+      "Tom Brady",
+      "Kirk Cousins"
+    ],
+    "WR": [
+      "Allen Robinson II",
+      "A.J. Green",
+      "Marquise Brown",
+      "Darius Slayton",
+      "Sterling Shepherd",
+      "Diontae Johnson",
+      "Curtis Samuel"
+    ],
+    "TE": [
+      "Travis Kelce",
+      "Delanie Walker",
+      "Vance McDonald"
+    ],
+    "K": [
+      "Jake Elliot",
+      "Mason Crosby"
+    ]
+  },
+  "Tom": {
+    "RB": [
+      "Alvin Kamara",
+      "Miles Sanders",
+      "Ronald Jones II",
+      "Tevin Coleman",
+      "Boston Scott",
+      "Justice Hill"
+    ],
+    "QB": [
+      "Deshaun Watson",
+      "Jimmy Garoppolo",
+      "Jameis Winston"
+    ],
+    "WR": [
+      "Mike Evans",
+      "Chris Godwin",
+      "DK Metcalf",
+      "Mecole Hardman",
+      "Breshad Perriman"
+    ],
+    "TE": [
+      "Rob Gronkowski",
+      "O.J. Howard",
+      "Blake Jarwin"
+    ],
+    "K": [
+      "Justin Tucker",
+      "Harrison Butker",
+      "Robbie Gould"
+    ]
+  },
+  "Dylan": {
+    "RB": [
+      "Derrick Henry",
+      "Chris Carson",
+      "Marlon Mack",
+      "James White",
+      "Malcolm Brown"
+    ],
+    "QB": [
+      "Russell Wilson",
+      "Carson Wentz"
+    ],
+    "WR": [
+      "T.Y Hilton",
+      "Brandin Cooks",
+      "Larry Fitzgerald",
+      "Sammy Watkins",
+      "Jamison Crowder",
+      "DeSean Jackson",
+      "Kenny Stills",
+      "Corey Davis"
+    ],
+    "TE": [
+      "Zach Ertz",
+      "Hunter Henry",
+      "Jimmy Graham"
+    ],
+    "K": [
+      "Matt Gay",
+      "Stephen Hauschka"
+    ]
+  },
+  "Jon": {
+    "RB": [
+      "Saquon Barkley",
+      "Kenyan Drake",
+      "Joe Mixon",
+      "Rashaad Penny",
+      "Tony Pollard"
+    ],
+    "QB": [
+      "Matt Ryan",
+      "Ben Roethlisberger",
+      "Jared Goff"
+    ],
+    "WR": [
+      "Davante Adams",
+      "Odell Beckham Jr.",
+      "DeVante Parker",
+      "Marvin Jones Jr.",
+      "Jarvis Landry",
+      "John Brown",
+      "James Washington",
+      "Josh Reynolds"
+    ],
+    "TE": [
+      "Mike Gesicki",
+      "Dallas Goedert",
+      "Jonnu Smith"
+    ],
+    "K": [
+      "Zane Gonzalez"
+    ]
+  },
+  "James": {
+    "RB": [
+      "Dalvin Cook",
+      "James Conner",
+      "David Johnson",
+      "Dion Lewis",
+      "Alexander Mattison"
+    ],
+    "QB": [
+      "Aaron Rodgers",
+      "Josh Allen"
+    ],
+    "WR": [
+      "Julio Jones",
+      "Keenan Allen",
+      "Deebo Samuel",
+      "Alshon Jeffery",
+      "A.J. Brown",
+      "Anthony Miller",
+      "Cole Beasley",
+      "Mohamed Sanu Sr."
+    ],
+    "TE": [
+      "Mark Andrews",
+      "Kyle Rudolph",
+      "Will Dissly"
+    ],
+    "K": [
+      "Chris Boswell",
+      "Graham Ganu"
+    ]
+  },
+  "Harry": {
+    "RB": [
+      "Josh Jacobs",
+      "Leonard Fournette",
+      "Sony Michel",
+      "Matt Breida",
+      "Royce Freeman",
+      "Chase Edmonds"
+    ],
+    "QB": [
+      "Kyler Murray",
+      "Daniel Jones",
+      "Ryan Fitzpatrick"
+    ],
+    "WR": [
+      "Tyreek Hill",
+      "Adam Thielen",
+      "Christian Kirk",
+      "Will Fuller V",
+      "Preston Williams",
+      "Dede Westbrook",
+      "Auden Tate"
+    ],
+    "TE": [
+      "Evan Engram",
+      "Hayden Hurst"
+    ],
+    "K": [
+      "Wil Lutz",
+      "Dan Bailey"
+    ]
+  },
+  "Lewys": {
+    "RB": [
+      "Aaron Jones",
+      "Todd Gurley II",
+      "Damien Williams",
+      "Jordan Howard",
+      "Duke Johnson"
+    ],
+    "QB": [
+      "Lamar Jackson",
+      "Matthew Stafford",
+      "Tyrod Taylor"
+    ],
+    "WR": [
+      "Cooper Kupp",
+      "Courtland Sutton",
+      "DJ Chark Jr.",
+      "Emmanuel Sanders",
+      "Mike Williams",
+      "Willie Snead IV",
+      "John Ross III"
+    ],
+    "TE": [
+      "George Kittle",
+      "Greg Olsen",
+      "T.J. Hockenson"
+    ],
+    "K": [
+      "Matt Prater",
+      "Michael Badgley"
+    ]
+  },
+  "Brandon": {
+    "RB": [
+      "Nick Chubb",
+      "Austin Ekeler",
+      "Devin Singletary",
+      "Derrius Guice",
+      "Darwin Thompson",
+      "Jaylen Samuels"
+    ],
+    "QB": [
+      "Baker Mayfield",
+      "Gardner Minshew II"
+    ],
+    "WR": [
+      "Michael Thomas",
+      "Kenny Golladay",
+      "Robert Woods",
+      "Calvin Ridley",
+      "Michael Gallup",
+      "Randall Cobb"
+    ],
+    "TE": [
+      "Darren Waller",
+      "Noah Fant",
+      "Dawson Knox"
+    ],
+    "K": [
+      "Greg Zuerlein",
+      "Younghoe Koo"
+    ]
+  },
+  "Luc": {
+    "RB": [
+      "Kareem Hunt",
+      "Melvin Gordon III",
+      "Phillip Lindsay",
+      "Adrian Peterson",
+      "Darrell Henderson Jr.",
+      "Kalen Ballage"
+    ],
+    "QB": [
+      "Patrick Mahomes",
+      "Philip Rivers"
+    ],
+    "WR": [
+      "DeAndre Hopkins",
+      "Stefon Diggs",
+      "Tyler Lockett",
+      "Julian Edelman",
+      "Terry McLaurin",
+      "Robby Anderson",
+      "N'Keal Harry",
+      "Phillip Dorsett II"
+    ],
+    "TE": [
+      "Austin Hooper",
+      "Tyler Higbee",
+      "Irv Smith Jr."
+    ],
+    "K": [
+      "Josh Lambo"
+    ]
+  }
+}
