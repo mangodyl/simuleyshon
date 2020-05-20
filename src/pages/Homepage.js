@@ -9,7 +9,7 @@ import {
   H4,
   ButtonGridContainer,
   ButtonGridThreeRow,
-  ButtonGridTwoRow,
+  //   ButtonGridTwoRow,
 } from "./Homepage.style";
 
 const Homepage = () => {
@@ -24,9 +24,22 @@ const Homepage = () => {
       </TitleContainer>
       <ButtonGridContainer>
         <ButtonGridThreeRow>
-          <OwnerButton name={"Dyl"} />
-          <OwnerButton name={"Lewys"} />
-          <OwnerButton name={"Matt"} />
+          <OwnerButton name="Dyl" color="green" />
+          <OwnerButton name="Lewys" color="red" />
+          <OwnerButton name="Matt" color="blue" />
+        </ButtonGridThreeRow>
+        <ButtonGridThreeRow>
+          <OwnerButton name="Brandon" color="orange" />
+          <OwnerButton name="Luc" color="yellow" />
+        </ButtonGridThreeRow>
+        <ButtonGridThreeRow>
+          <OwnerButton name="James" color="blue" />
+          <OwnerButton name="Jon" color="green" />
+          <OwnerButton name="Tom" color="orange" />
+        </ButtonGridThreeRow>
+        <ButtonGridThreeRow>
+          <OwnerButton name="Adam" color="yellow" />
+          <OwnerButton name="Harry" color="red" />
         </ButtonGridThreeRow>
       </ButtonGridContainer>
     </ContentWrapper>

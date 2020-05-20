@@ -37,9 +37,14 @@ const TitleWrapper = styled.div`
 const Title = styled.h1`
   color: #011627;
   font-family: "Raleway", sans-serif;
-  font-size: 3em;
+  font-size: 2em;
   text-decoration: underline;
-  margin-bottom: 56px;
+  margin-bottom: 24px;
+
+  @media only screen and (min-width: 980px) {
+    font-size: 3em;
+    margin-bottom: 56px;
+  }
 `;
 
 const H4 = styled.h4`
@@ -60,15 +65,21 @@ const ButtonGridContainer = styled.div`
 
 const ButtonGridThreeRow = styled.div`
   width: 100;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const ButtonGridTwoRow = styled.div`
-  width: 100;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
+  /* margin-bottom: 56px; */
+  flex-wrap: wrap;
 `;
+
+// const ButtonGridTwoRow = styled.div`
+//   width: 100;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   /* margin-bottom: 56px; */
+//   flex-wrap: wrap;
+// `;
 
 export {
   ContentWrapper,
@@ -79,5 +90,5 @@ export {
   H4,
   ButtonGridContainer,
   ButtonGridThreeRow,
-  ButtonGridTwoRow,
+  //   ButtonGridTwoRow,
 };
