@@ -3,18 +3,18 @@ import styled from "styled-components";
 const ContentWrapper = styled.div`
   padding: 40px 0px;
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 90%;
 `;
 
 const Title = styled.div`
-  color: #f8b500;
+  color: #c14545;
   font-family: "Dosis", sans-serif;
   font-size: 3em;
   margin-bottom: 8px;
 `;
 
 const P = styled.div`
-  color: #fdfdfc;
+  color: #ea4c4c;
   font-family: "Roboto", sans-serif;
 `;
 

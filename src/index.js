@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "normalize.css";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
@@ -11,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        background-color: #0f1928;
+        background-color: #F6F7EB;
     }
     html {
         box-sizing: border-box;

@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import Home from "./pages/Home";
+import Homepage from "./pages/Homepage";
 
 function App() {
   return (
     <Fragment>
-      <Home />
+      <Homepage />
     </Fragment>
   );
 }
